@@ -1,26 +1,28 @@
 import React from 'react';
 import Styled from 'styled-components';
 import './App.css';
-import {Header} from './components/Header';
+import { Header } from './components/Header.js';
+import { filtro } from './components/Filtros';
+import { Main } from './components/Main';
 export class App extends React.Component {
 
-  render(){
-  return (
-    <div>
-      <Cabecalho>
+  render() {
+    return (
+      <div>
+        <Header/>
+
         
-      </Cabecalho>
 
-      <div className='filtro-carrinho'>
-        Aqui estão os filtros e carrinho
+        <filtro className='filtro-carrinho'>
+          Aqui estão os filtros e carrinho
+        </filtro>
+
+        <Main>
+          Produtos aqui
+        </Main>
       </div>
-
-      <main>
-        Produtos aqui
-      </main>
-    </div>
-  );
-}
+    );
+  }
 }
 
 export default App;
