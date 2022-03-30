@@ -1,13 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import Styled from 'styled-components';
 import './App.css';
+import {Header} from './components/Header';
+export class App extends React.Component {
 
-function App() {
+  render(){
   return (
     <div>
-      Oi
+      <Cabecalho>
+        
+      </Cabecalho>
+
+      <div className='filtro-carrinho'>
+        Aqui estão os filtros e carrinho
+      </div>
+
+      <main>
+        Produtos aqui
+      </main>
     </div>
   );
+}
 }
 
 export default App;
