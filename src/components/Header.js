@@ -1,12 +1,12 @@
 import React from "react";
-import Styled from 'styledComponents';
+import Styled from 'styled-components';
 
 
 const Cabecalho = Styled.div`
-background: blue;
+
 `
 
-export function Header (){
+export function Header() {
     return (
         <Cabecalho>
             Oi
