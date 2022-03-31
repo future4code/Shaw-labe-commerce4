@@ -1,25 +1,24 @@
 import React from 'react';
 import Styled from 'styled-components';
 import './App.css';
-import { Header } from './components/Header.js';
-import { filtro } from './components/Filtros';
-import { Main } from './components/Main';
+import {Header} from './components/Header.js';
+import {Filtros} from './components/Filtros';
+import {Main} from './components/Main';
+
+
+
 export class App extends React.Component {
 
   render() {
     return (
       <div>
-        <Header/>
-
         
+        <p>
+          ****ITENS QUE DEVEM SER RENDERIZADOS NO APP.JS***
+          1. Lista de Produtos: relevante para Main e Carrinho
+          2. Estados dos Filtros: relevante para Filtros e Main
+        </p>
 
-        <filtro className='filtro-carrinho'>
-         
-        </filtro>
-
-        <Main>
-         
-        </Main>
       </div>
     );
   }

@@ -31,6 +31,20 @@ export function Main() {
     return (
         <Pai>
 
+            
+            <form className="ordenaçãoProdutos">
+
+                <p>REFERENCIA AQUI https://pt-br.reactjs.org/docs/forms.html#the-select-tag</p> 
+
+                <br/><lable>Ordenação</lable><br/>
+
+                <select value={this.state.value} onChange={this.propCriada}>
+                    <option value="crescente">Preço Crescente</option>
+                    <option value="decrescente">Preço Descrescente</option>
+                </select><br/> 
+
+            </form> 
+
             <Produto1 >
                 <item>
 
