@@ -14,7 +14,7 @@ background-color: blue
 */
 
 
-export function Filtro(props) {
+export function Filtros(props) {
     //const listaPreco = props.lista.filter((produtos))
     //const listaNome
 
