@@ -14,11 +14,11 @@ export class App extends React.Component {
         
 
         <filtro className='filtro-carrinho'>
-          Aqui estão os filtros e carrinho
+         
         </filtro>
 
         <Main>
-          Produtos aqui
+         
         </Main>
       </div>
     );
