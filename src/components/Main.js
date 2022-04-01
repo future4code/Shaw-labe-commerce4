@@ -1,6 +1,6 @@
 import React from "react";
 import Styled from 'styled-components';
-
+import App from "../App";
 const Pai = Styled.div`
 display:flex;
 justify: content: 2000px;
@@ -8,8 +8,7 @@ flex-wrap:wrap;
 width:99%;
 right:100%;
 justify-content: space-around;
-border: 4px solid black
-
+border: 4px solid black;
 `
 const Produto1 = Styled.div`
 display: flex;
@@ -17,35 +16,52 @@ display: flex;
 align-items;column;
 justify-items: space-between;
 border: 1px solid black; 
-
 align-items:start;
 
-
-
-
 `
+/*  <form className="ordenaçãoProdutos">
+
+              <p>REFERENCIA AQUI https://pt-br.reactjs.org/docs/forms.html#the-select-tag</p>
+
+              <br /><lable>Ordenação</lable><br />
+
+              <select value={this.state.value} onChange={this.propCriada}>
+                  <option value="crescente">Preço Crescente</option>
+                  <option value="decrescente">Preço Descrescente</option>
+              </select><br />
+
+          </form>
+*/
 
 
 
-export function Main() {
+export function Main(props) {
+
+ 
+
+
+    const MeuComponenteReact = (props) => {
+
+
     return (
-        <Pai>
+        <div>
+            
+
 
             
-            <form className="ordenaçãoProdutos">
+        {props.state.listaProduto.map((produto) => {
+            return <p >
+              <strong>{produto.nome}</strong>: {produto.preco}
+            </p>
 
-                <p>REFERENCIA AQUI https://pt-br.reactjs.org/docs/forms.html#the-select-tag</p> 
+          })}
+          </div>
+    )
+}
+}
+export default Main;
 
-                <br/><lable>Ordenação</lable><br/>
-
-                <select value={this.state.value} onChange={this.propCriada}>
-                    <option value="crescente">Preço Crescente</option>
-                    <option value="decrescente">Preço Descrescente</option>
-                </select><br/> 
-
-            </form> 
-
-            <Produto1 >
+ /* <Produto1 >
                 <item>
 
                     <img src="https://picsum.photos/201/300  " />
@@ -134,7 +150,8 @@ export function Main() {
                     <p>item 11</p>
                     < button> adicionar o carinho</ button>
                 </item>
-            </Produto1> <Produto1 >
+            </Produto1>
+            <Produto1 >
                 <item>
 
                     <img src="https://picsum.photos/212/300  " />
@@ -158,86 +175,4 @@ export function Main() {
                 </item>
             </Produto1>
 
-
-
-
-        </Pai>
-
-    )
-}
-
-
-/*
-<Produto1 >
-                <item>
-
-                    <img src="https://picsum.photos/213/300  " />
-                    <p>item 13</p>
-                    < button> adicionar o carinho</ button>
-                </item>
-            </Produto1>
-            <Produto1 >
-                <item>
-
-                    <img src="https://picsum.photos/214/300  " />
-                    <p>item 14</p>
-                    < button> adicionar o carinho</ button>
-                </item>
-            </Produto1>
-            <Produto1 >
-                <item>
-
-                    <img src="https://picsum.photos/215/300  " />
-                    <p>item 15</p>
-                    < button> adicionar o carinho</ button>
-                </item>
-            </Produto1>
-            <Produto1 >
-                <item>
-
-                    <img src="https://picsum.photos/216/300 " />
-                    <p>item 16</p>
-                    < button> adicionar o carinho</ button>
-                </item>
-            </Produto1>
-            <Produto1 >
-                <item>
-
-
-                    <img src="https://picsum.photos/217/300 " />
-                    <p>item 17</p>
-                    < button> adicionar o carinho</ button>
-                </item>
-            </Produto1>
-            <Produto1 >
-                <item>
-
-                    <img src="https://picsum.photos/218/300  " />
-                    <p>item 18</p>
-                    < button> adicionar o carinho</ button>
-                </item>
-            </Produto1>
-            <Produto1 >
-
-                <img src="https://picsum.photos/200/300?grayscale  " />
-                Nave espacial!
-                < button> adicionar o carinho</ button>
-            </Produto1>
-            <Produto1 >
-
-                <img src="https://picsum.photos/200/300?grayscale  " />
-                Nave espacial!
-                < button> adicionar o carinho</ button>
-            </Produto1>
-            <Produto1 >
-
-                <img src="https://picsum.photos/200/300?grayscale  " />
-                Nave espacial!
-                < button> adicionar o carinho</ button>
-            </Produto1>
-            <Produto1 >
-
-                <img src="https://picsum.photos/200/300?grayscale  " />
-                Nave espacial!
-                < button> adicionar o carinho</ button>
-            </Produto1>*/
+   */
