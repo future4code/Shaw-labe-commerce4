@@ -1,17 +1,14 @@
 import React from "react";
 //import {Produtos} from "./App.js";
-//import Styled from 'styled-components';
+import Styled from 'styled-components';
 
-/*const filtro = Styled.div`
+const Filtro = Styled.div`
 display:flex;
-content-align: row;
-width: 60%;
-position: absolute,
-border: 3px solid black,
-top: 170px,
-background-color: blue
+border: 3px solid black;
+top: 170px;
+background-color: blue;
+flex-grow: 1;
 `
-*/
 
 
 export function Filtros(props) {
@@ -23,50 +20,50 @@ export function Filtros(props) {
     //BotaoLimpaFiltro()
 
     return (
-        <div className="filtros">
-            
+        <Filtro>
+
             <h3>Filtros</h3>
-            
-            <form className="formularioFiltragem">                
 
-                <lable>Buscar produto</lable><br/>
-                <input placeholder="Digite o nome do produto"></input><br/>
+            <form className="formularioFiltragem">
 
-                <br/><lable>Valor máximo:</lable><br/>
-                <input></input><br/>
+                <lable>Buscar produto</lable><br />
+                <input placeholder="Digite o nome do produto"></input><br />
 
-                <br/><lable>Valor mínimo:</lable><br/>
-                <input></input><br/>
+                <br /><lable>Valor máximo:</lable><br />
+                <input></input><br />
 
-                <br/><button className="limpa-filtro" onClicK={this.onClickBotaoLimpaFiltro}>Limpar Filtros</button>  
+                <br /><lable>Valor mínimo:</lable><br />
+                <input></input><br />
 
-            </form>         
+                <br /><button className="limpa-filtro" onClicK={props.onClickBotaoLimpaFiltro}>Limpar Filtros</button>
 
-                  
+            </form>
 
-            
-            
+
+
+
+
             <p>
                 REQUISITOS LABENU
                 filtro numero/preço
-                    - [ ]  O usuário deve ser capaz de filtrar os itens por preço mínimo
-                    - [ ]  O usuário deve ser capaz de filtrar os itens por preço máximo
-                    - [ ]  O usuário deve ser capaz de ordenar os itens em ordem crescente ou decrescente
-                
+                - [ ]  O usuário deve ser capaz de filtrar os itens por preço mínimo
+                - [ ]  O usuário deve ser capaz de filtrar os itens por preço máximo
+                - [ ]  O usuário deve ser capaz de ordenar os itens em ordem crescente ou decrescente
+
                 filtro nome
-                    - [ ]  O usuário deve ser capaz de realizar uma busca por nome
+                - [ ]  O usuário deve ser capaz de realizar uma busca por nome
 
                 vai rolar não:
-                    - [x]  O usuário deve ser capaz de adicionar filtros, busca e ordenação simultaneamente
+                - [x]  O usuário deve ser capaz de adicionar filtros, busca e ordenação simultaneamente
 
                 voltar estado inicial
-                    - [ ]  O usuário deve ser capaz de retornar à visualização sem filtros
-            </p>      
-                
-                       
+                - [ ]  O usuário deve ser capaz de retornar à visualização sem filtros
+            </p>
 
-        </div >
-        
+
+
+        </Filtro >
+
     )
 }
 
