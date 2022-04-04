@@ -1,21 +1,16 @@
 import React from 'react';
-import Styled from 'styled-components';
+import styled from 'styled-components';
 import './App.css';
 import { Header } from './components/Header.js';
-import { Filtros } from './components/Filtros';
+import {Filtros} from './components/Filtros';
 import { Main } from './components/Main';
 
 
 
+export class App extends React.Component { 
+  state={
 
-
-
-
-
-
-export class App extends React.Component {
-  state = {
-    listaProduto :[
+    listaProduto: [
       {
         id: 1,
         nome: "Nave 1",
@@ -64,39 +59,45 @@ export class App extends React.Component {
         preco: 800.000,
         imagem: "https://pixabay.com/images/id-2837606/"
       }
-
-
-
+    
     ]
   }
 
+  //trabalhar com funções de array
+  /*
+  onClickAdd=()=>{
+    const valorAtual=this.state.listaProduto.preco
+    const somaProduto = valorAtual+...?
 
+    this.setState({listaProduto:somaProduto})
+  }
 
+  onClickRemove=()=>{
+    this.setState({listaProduto:this.state.listaProduto-...?})
+  }
+  */    
 
-  render() {
-
-
-
-
+  render() {   
 
     return (
       <div>
 
 
-
-        <Header />
-        <Filtros />
+        <Header/>
+        <Filtros/>
         <Main/>
-          
+
+        <BotaoAdd>
+          <button onClick={this.onClickAdd}>Adicionar no carrinho</button>
+        </BotaoAdd>
+
+        <BotaoRemove>
+          <button onClick={this.onClickRemove}>Remover do Carrinho</button>
+        </BotaoRemove>       
         
-
-
-
-
 
       </div>
     );
   }
 }
 
-export default App;
