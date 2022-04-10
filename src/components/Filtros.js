@@ -1,25 +1,57 @@
 import React from "react";
-import Styled from 'styled-components';
+import styled from 'styled-components';
+import App from './App';
 
-export function Filtro() {
-    return (
-        <div className="filtro">
-            OI EU SOU O FILTRO
+const FiltroCss= styled.div`
+display: flex;
+border: 3px solid black;
+top: 170px;
+background-color: blueviolet;
+flex-grow: 1;
+`
 
-            <p className="filtroUm">
-            - [ ]  O usuário deve ser capaz de filtrar os itens por preço mínimo
-            - [ ]  O usuário deve ser capaz de filtrar os itens por preço máximo
-            - [ ]  O usuário deve ser capaz de realizar uma busca por nome
-            - [ ]  O usuário deve ser capaz de ordenar os itens em ordem crescente ou decrescente
-            - [ ]  O usuário deve ser capaz de adicionar  filtros, busca e ordenação simultaneamente
-            - [ ]  O usuário deve ser capaz de retornar à visualização sem filtros
-            </p>
+export class Filtros extends React.Component {
+    
+    //const listaPrecoProduto 
+    //const listaNomeProduto
+    //funtion BotaoLimpaFiltro()
+    
+    state={
+        BotaoLimpaFiltro:""
+    }
 
-        </div >
-        
-    )
+    render(){
+        return (
+
+            <FiltroCss>
+    
+                <h3>Filtros</h3>
+                
+                <form className="formularioFiltragem">
+    
+                    <lable>Buscar produto</lable><br />
+                    <input placeholder="Digite o nome do produto"></input><br />
+    
+                    <br /><lable>Valor máximo:</lable><br />
+                    <input></input><br />
+    
+                    <br /><lable>Valor mínimo:</lable><br />
+                    <input></input><br />
+    
+                    <br /><button className="limpa-filtro" onClicK={BotaoLimpaFiltro}>Limpar Filtros</button>
+    
+                </form>        
+    
+    
+    
+            </FiltroCss>
+    
+        )
+    }
+    
+
 }
-
+    
 
 
 
