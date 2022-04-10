@@ -78,7 +78,7 @@ export class App extends React.Component {
   */    
 
   render() {   
-
+// correcao do código
     return (
       <div>
 
